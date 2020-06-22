@@ -85,6 +85,7 @@ func (c Client) makeRequest(req *http.Request, at authType, response interface{}
 		if err != nil {
 			return fmt.Errorf("error in reading response body: %v", err)
 		}
+
 		out.StatusCode = resp.StatusCode
 		out.Message = string(body)
 		return out
