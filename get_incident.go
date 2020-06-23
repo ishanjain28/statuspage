@@ -50,7 +50,7 @@ func (c Client) GetIncident(pageID, incidentID string) (*GetIncidentOutput, erro
 	}
 
 	response := new(GetIncidentOutput)
-	err = c.makeRequest(req, authOauthHeader, &response, http.StatusCreated)
+	err = c.makeRequest(req, authOauthHeader, &response, http.StatusOK)
 
 	return response, err
 }
